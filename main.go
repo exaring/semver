@@ -36,12 +36,19 @@ func main() {
 
 	if *major {
 		version.Major++
-	}
-	if *minor {
+		version.Minor = 0
+		version.Patch = 0
+		version.Pre = nil
+		version.Build = nil
+	} else if *minor {
 		version.Minor++
-	}
-	if *patch {
+		version.Patch = 0
+		version.Pre = nil
+		version.Build = nil
+	} else if *patch {
 		version.Patch++
+		version.Pre = nil
+		version.Build = nil
 	}
 	if *build != "" {
 		version.Build = []string{*build}

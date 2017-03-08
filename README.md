@@ -20,9 +20,9 @@ OPTIONS:
 > semver -minor 1.0.0
 1.1.0
 
->semver -minor -patch  1.0.0
-1.1.1
+>semver -minor  1.3.19
+1.4.0
 
->semver -minor -patch -build=alpha 1.0.0
-1.1.1+alpha
+>semver -minor -build=alpha 1.0.0
+1.2.0+alpha
 ```
